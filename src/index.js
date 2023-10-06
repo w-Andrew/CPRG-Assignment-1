@@ -8,7 +8,7 @@
 
 //conversion function
 
-var conversionType = 3;
+var conversionType = 1;
 
 setConversion = (val) => {
     switch (val) {

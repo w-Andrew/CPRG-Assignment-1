@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
     <link href="/dist/output.css" rel="stylesheet">
     <title>Assignment 1</title>
 </head>
@@ -17,17 +16,36 @@
         <button class="bg-gray-500 rounded-md p-2 font-bold text-lg" onclick="setConversion(5);">Temperature</button>
     </div>
     <div class="text-center">
-        <!-- add drop down box that will allow for converting both ways// or a button that changes when clicked...
-            can add to the JS to make a fancy button if we want-->
+        <!-- add drop-down box that will allow for converting both ways
+             or a button that changes when clicked...
+             can add to the JS to make a fancy button if we want -->
         <button id="convertButton" class="bg-gray-500 rounded-md p-2 font-bold text-lg"></button>
-        <p class="p2 font-bold text-lg">Enter placeholder value or values (comma seperated)</p>
-        <input id="numberInput" placeholder="Enter a number" class="border-2 border-blue-500">
+        <p class="p2 font-bold text-lg">Enter value or values (comma separated)</p>
+        <div>
+            <input id="numberInput" placeholder="Enter a number" class="border-2 border-blue-500">
+            <select id="unitSelector" class="border-2 border-blue-500">
+                <optgroup label="Weight">
+                    <option value="lb">Lb</option>
+                    <option value="kg">Kg</option>
+                </optgroup>
+                <optgroup label="Distance">
+                    <option value="miles">Miles</option>
+                    <option value="km">Km</option>
+                </optgroup>
+                <optgroup label="Temperature">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                </optgroup>
+            </select>
+        </div>
         <!-- add button for submitting values to be converted -->
-        <button class="bg-slate-300 rounded font-bold p-2" onclick=convertToArray(numberInput.value)>Convert!</button>
+        <button class="bg-slate-300 rounded font-bold p-2" onclick="convertToArray(numberInput.value)">Convert!</button>
 
         <!-- area to post results -->
         <p class="bg-gray-500 font-bold text-lg" id="results"></p>
     </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
